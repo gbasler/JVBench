@@ -2,18 +2,18 @@ package jvbench.blackscholes;
 
 public class OptionData {
 
-    private float s;
-    private float strike;
-    private float r;
-    private float divq;
-    private float v;
-    private float t;
+    private double s;
+    private double strike;
+    private double r;
+    private double divq;
+    private double v;
+    private double t;
 
     private char OptionType; // "P"=PUT, "C"=CALL
-    private float divs;
-    private float DGrefval;
+    private double divs;
+    private double DGrefval;
 
-    public OptionData(float s, float strike, float r, float divq, float v, float t, char optionType, float divs, float DGrefval) {
+    public OptionData(double s, double strike, double r, double divq, double v, double t, char optionType, double divs, double DGrefval) {
         this.s = s;
         this.strike = strike;
         this.r = r;
@@ -25,51 +25,51 @@ public class OptionData {
         this.DGrefval = DGrefval;
     }
 
-    public float getS() {
+    public double getS() {
         return s;
     }
 
-    public void setS(float s) {
+    public void setS(double s) {
         this.s = s;
     }
 
-    public float getStrike() {
+    public double getStrike() {
         return strike;
     }
 
-    public void setStrike(float strike) {
+    public void setStrike(double strike) {
         this.strike = strike;
     }
 
-    public float getR() {
+    public double getR() {
         return r;
     }
 
-    public void setR(float r) {
+    public void setR(double r) {
         this.r = r;
     }
 
-    public float getDivq() {
+    public double getDivq() {
         return divq;
     }
 
-    public void setDivq(float divq) {
+    public void setDivq(double divq) {
         this.divq = divq;
     }
 
-    public float getV() {
+    public double getV() {
         return v;
     }
 
-    public void setV(float v) {
+    public void setV(double v) {
         this.v = v;
     }
 
-    public float getT() {
+    public double getT() {
         return t;
     }
 
-    public void setT(float t) {
+    public void setT(double t) {
         this.t = t;
     }
 
@@ -81,19 +81,19 @@ public class OptionData {
         OptionType = optionType;
     }
 
-    public float getDivs() {
+    public double getDivs() {
         return divs;
     }
 
-    public void setDivs(float divs) {
+    public void setDivs(double divs) {
         this.divs = divs;
     }
 
-    public float getDGrefval() {
+    public double getDGrefval() {
         return DGrefval;
     }
 
-    public void setDGrefval(float DGrefval) {
+    public void setDGrefval(double DGrefval) {
         this.DGrefval = DGrefval;
     }
 }

@@ -15,11 +15,11 @@ class BlackScholesTest {
     @Test
     public void scalar() {
         Blackscholes.scalar();
-        float [] prices = Blackscholes.getPrices();
+        double [] prices = Blackscholes.getPrices();
         OptionData [] data = Blackscholes.getData();
 
         for (int i=0; i < data.length; i++) {
-            float priceDelta = data[i].getDGrefval() - prices[i];
+            double priceDelta = data[i].getDGrefval() - prices[i];
             assertTrue(Math.abs(priceDelta) < 1e-4, "Error on " + i + ". Computed=" + prices[i] + ", Ref=" + data[i].getDGrefval() + ", Delta=" + priceDelta + ",");
         }
     }
@@ -27,11 +27,11 @@ class BlackScholesTest {
     @Test
     public void vector() {
         Blackscholes.vector();
-        float [] prices = Blackscholes.getPrices();
+        double [] prices = Blackscholes.getPrices();
         OptionData [] data = Blackscholes.getData();
 
         for (int i=0; i < data.length; i++) {
-            float priceDelta = data[i].getDGrefval() - prices[i];
+            double priceDelta = data[i].getDGrefval() - prices[i];
             assertTrue(Math.abs(priceDelta) < 1e-4, "Error on " + i + ". Computed=" + prices[i] + ", Ref=" + data[i].getDGrefval() + ", Delta=" + priceDelta + ",");
         }
     }
